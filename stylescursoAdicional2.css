@@ -1,0 +1,703 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body,button{
+    margin:0;
+    background-color:#2E2E2E;
+ 
+}
+p,td,button,th{
+    font-family: 'Merriweather', sans-serif;
+
+}
+h1,h2,h3,h4,li{
+    font-family: 'DM Serif Text', sans-serif;
+}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+
+/* Inicio del Header*/
+
+header {
+    border-bottom: 1px solid  #F5F1E3; 
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+
+header .container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+}
+
+.nombre-empresa {
+    color: #F5F1E3;
+    font-size: 30px;
+    margin: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 120px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+nav .menu {
+    display: flex;
+    list-style: none;
+}
+
+
+.menu li a{
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    
+
+}
+.menu-vertical{
+    position: absolute;
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #242323;
+
+}
+
+.menu li:hover > .menu-vertical { /*hijo directo de .menu li, por eso se le aplica dipslay block a la clase */
+    display: block;
+
+}
+
+/*ul:hover .menu-vertical{
+    transform:  translateX(10px); /* moverá el ícono un poco cuando el mouse pase por encima
+
+}*/
+
+/*para que el menu desplegablede acceder que no sobresalga*/
+@media (min-width: 921px) and (max-width:1150px) {
+    .menu-vertical{
+        position: absolute;
+        display: none;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        background-color: #242323;
+
+    }
+    ul:hover .menu-vertical{
+        transform:  translateX(-10px); /* moverá el ícono un poco para que no salga de la pantalla */
+    }
+    }
+
+.menu-vertical li:hover{
+    background-color: #1b1b1b;
+    
+}
+
+.menu-vertical li a{
+    display: block;
+    color: #F5F1E3;
+    font-size: 18px;
+    padding: 15px 15px 15px 20px;
+    
+}
+
+a {
+    text-decoration: none;
+    color: #F5F1E3;
+    font-size: 20px;
+}
+
+nav a:hover {
+    color:#C9A66B;
+}
+
+
+.icon {
+    width: 14px; /* Puedes ajustar el tamaño según lo que prefieras */
+    height: 14px; /* Ajusta también el salto */
+    transition: transform 0.3s ease; /* Agrega una transición suave al ícono */
+}
+
+.nav-link:hover .icon {
+    transform: rotate(180deg); /* Este efecto moverá el ícono un poco cuando el mouse pase por encima */
+}
+
+.hamburguer {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    top: 30px;            /* <-- Ajusta según el alto de tu header */
+    right: 30px;          /* <-- La ubica a la derecha */
+    z-index: 1100;        /* <-- Asegura que esté encima de otros elementos */
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #F5F1E3;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+
+
+/*Header Responsive*/
+@media (max-width: 920px) {
+    header .container {
+      position: relative;  /* Cambia a espacio entre para que el logo y el menú se alineen correctamente */
+      z-index: 10000;
+      justify-content: space-between;
+    }
+   
+    nav .menu{
+        display: none;
+        flex-direction: column; 
+        position: absolute;
+        top: 100%; 
+        right: 0;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav .nav-link{
+        background-color: #F5F1E3;
+        color: #2E2E2E;
+    }
+    nav .menu li {
+        margin: 7px 0; 
+    }
+
+    nav .hamburguer {
+        display: flex; /* Muestra el ícono de hamburguesa en pantallas pequeñas */
+    }
+
+    nav .menu.show{
+        display: flex; /* Muestra el menú cuando se activa */
+        background-color: #F5F1E3;
+    }
+
+    .menu li {
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+        
+    }
+
+    .menu-vertical {
+        position: static;
+        background-color: #2E2E2E;
+        width: 100%;        
+        
+    }
+    
+    .nombre-empresa {
+        text-align: left;
+      
+    }
+
+}
+
+/*header menu responsive*/
+@media (min-width:0px)and (max-width: 619px) {
+    header .container {
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+    }
+    .menu .nav-link{
+            font-size: 15px;
+        }
+    .nombre-empresa{
+        font-size: 27px;
+    }
+
+    .menu-vertical li a{
+        font-size: 15px;
+    }
+}
+
+@media (min-width:620px)and (max-width: 920px) {
+    header .container {
+        align-items: center;
+    }
+    .menu .nav-link{
+            font-size: 18px;
+        }
+    .nombre-empresa{
+        font-size: 27px;
+    }
+
+    .menu-vertical li a{
+
+        font-size: 18px;
+    }
+}
+
+/*Inicio main*/
+#hero{
+    overflow: hidden;
+    align-items: center;
+    padding: 60px;
+    height: 100%;
+     background-image:linear-gradient(
+        #00000080, 
+        #00000080 
+    ),url("media/CursoAdicional2/cursoAdicional2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.content {
+    display: flex;
+    flex-direction: row-reverse; 
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+.fecha{
+    margin-left:2px;
+}
+
+.info {
+    flex: 1;
+    max-width: 500px;
+    text-align: right;
+    color:#F5F1E3;
+}
+
+.info h1 {
+    font-size:5em;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.info p{    
+    font-size: 1.4em;
+    margin-bottom: 22px;
+    margin-top:22px;
+    color:#F5F1E3;
+}
+
+.info-fecha {
+    display:inline-flex;
+    gap: 30px; /* Espacio entre el ícono y el texto */
+    color: #F5F1E3;
+}
+
+.info-fecha i {
+    font-size: 5.5em;
+    color:#F5F1E3;
+}
+
+.form-container {
+    flex: 1 1 300px;
+    max-width:450px;
+    margin-right: 50px;
+}
+
+.form-container .formulario{
+    background-color: #F5F1E3;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.329);
+
+}
+
+fieldset {
+    border: none;
+}
+
+legend {
+    font-size: 1.2em;
+    margin:8px 0;
+    text-align: center;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #6A1B1A;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+    background-color: #C9A66B;
+    color: rgb(0, 0, 0);
+}
+
+.regresar button {
+    background-color: #6A1B1A;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0px 0px 80px 0px;
+    justify-content: center;
+}
+.regresar button:hover {
+  background-color: #C9A66B;
+  color: #2E2E2E;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+#objetivo{
+    text-align: center;
+    display: flex;
+    padding: 130px;
+    background-color: #F5F1E3;
+}
+
+
+#objetivo h2 {
+    font-size: 5.7em;
+    color: #000000;
+    text-align: center;
+    margin:20px;
+}
+#objetivo p {
+    margin:40px;
+    font-size: 1.60em;
+}
+
+/*form hero - #objetivos*/
+@media (min-width:0px) and (max-width: 1120px) {
+    #hero {
+        flex-direction: column;
+        height: auto;
+    }
+    #objetivo {
+        padding:0;
+        height: 95vh;
+    }
+
+    .content {
+        flex-direction: column-reverse;
+        align-items: center;
+  
+    }
+    .fecha{
+        margin-left:2px;
+    }
+
+    .info {
+        max-width: 100%;
+        text-align: center;
+    }
+    .info h1 {
+        margin-top: 15px;
+    }
+
+    .form-container {
+        width: 100%;
+        margin-right: 0;
+        margin-top: 15px;
+    }
+    .info-fecha {
+        flex-direction: column;
+        gap: 10px
+    }
+    .info p {
+        margin-top: 10px;
+    }
+}
+
+/* texto #hero - #objetivos*/
+@media (min-width:0px) and (max-width: 390.9px) {
+    #hero{
+        padding: 10px;
+    }
+    .info h1 {
+        font-size:2.5em;
+        margin-bottom: 25px;
+        margin-top: 25px;
+    }
+
+    .regresar button {
+        margin: 0px 0px 65px 0px;
+    }
+
+    .info p{    
+        font-size: 0.75em;
+        color:#edecf3;
+    }
+
+    .info-fecha i{
+        font-size: 3.3em;
+    }
+
+    #objetivo .container h2{
+        font-size: 3em;
+        margin:22px;
+    }
+    #objetivo{
+        height: 75vh;
+
+    }
+    #objetivo .container p {
+        font-size: 1.10em;
+        margin: 22px;;
+    }
+
+}
+@media (min-width:391px) and (max-width: 484px) {
+    #hero{
+        padding: 20px;
+    }
+    .info h1 {
+        font-size:3.5em;
+        margin-bottom: 25px;
+        margin-top: 25px;
+    }
+
+    .info p{    
+        font-size: 0.95em;
+        margin-bottom: 20px;
+        color:#edecf3;
+    }
+
+    .info-fecha i{
+        font-size: 3.7em;
+    }
+    .regresar button {
+        margin: 0px 0px 70px 0px;
+    }
+
+    #objetivo{
+        height: 90vh;
+
+    }
+
+    #objetivo .container h2{
+        font-size: 4.7em;
+    }
+    
+    #objetivo .container p {
+        font-size: 1.50em;
+    }
+
+}
+@media (min-width:485px) and (max-width: 552px) {
+    #hero{
+            padding: 20px;
+        }
+    .info h1 {
+        font-size:4.5em;
+        margin-bottom: 25px;
+        margin-top: 25px;
+
+    }
+    .info p{    
+        font-size: 1.15em;
+        margin-bottom: 20px;
+        color:#edecf3;
+    }
+    .info-fecha i{
+        font-size: 4.7em;
+    }
+
+    .regresar button {
+        margin: 0px 0px 75px 0px;
+    }
+
+    #objetivo .container h2{
+        font-size: 4.7em;
+    }
+    
+    #objetivo .container p {
+        font-size: 1.50em;
+    }
+
+}
+
+#propuesta {
+    background-image:linear-gradient(
+       
+        #00000080, 
+        #00000080 
+    ),url('media/CursoAdicional2/pez1.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 180px 12px;
+}
+
+.propuesta-container {
+    background-color:#6A1B1A;
+    color: #F5F1E3;
+    max-width: 700px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 1px;
+    text-align: center;
+    justify-content: center;
+}
+
+#propuesta h3{
+    font-size: 1.5em;
+    color:#F5F1E3;
+    
+}
+#propuesta img {
+    width:60%;
+    border-radius: 88%;
+    text-align: center;
+   
+}
+
+#propuesta ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.1em;
+    text-align: center;
+    
+}
+#propuesta li {
+    font-family: 'Merriweather', sans-serif;
+}
+#propuesta ul li::before {
+    content: "- ";
+    color:#F5F1E3;
+    margin-right: 10px;
+    
+}
+
+#propuesta ul li {
+    margin-bottom: 20px;
+}
+
+#caracteristicas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    background-color: #F5F1E3;
+    padding: 120px 0;
+}
+
+#caracteristicas .informacion {
+    background-color: #C9A66B;
+    padding: 50px;
+    margin: 25px;
+    border-radius: 50px;
+    border: 1px solid #2E2E2E;
+    box-shadow: 7px 2px 7px #2E2E2E;
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+}
+.informacion h4{
+    font-size: 1.6em;
+    margin-top: 15px;
+    color: #2E2E2E
+}
+.informacion p,.informacion small {
+    color: #2E2E2E
+}
+
+.icon-calendario,.icon-tarjeta,.icon-certificado {
+    font-size: 85px;
+    color: #2E2E2E
+}
+
+/*caracteristicas*/
+@media (min-width:920px){
+    #caracteristicas .container{
+           display:flex;
+           justify-content: center;
+           
+       }
+          
+}
+
+
+/*inicio de footer*/
+footer .container{
+    display: flex;
+    height: 100px;
+    background-color: #2E2E2E;
+    justify-content: space-evenly;
+    align-items: center;  
+}
+
+footer p{
+    font-size: 20px;
+    color: #F5F1E3;
+    font-weight: bold;
+    margin: 0;
+}
+
+.menufooter {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menufooter li {
+    font-size: 30px;
+    font-weight: bold;
+    color:  #F5F1E3;
+}
+
+.menufooter a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.icon-ig,.icon-tw,.icon-fb{
+    font-size: 30px;
+    color:  #F5F1E3;
+    margin: 15px;
+
+}
+.icon-ig:hover,.icon-tw:hover,.icon-fb:hover{
+    color: #C9A66B;
+    cursor: pointer;
+}
+
+
+@media (max-width: 920px) {
+    footer .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 25px;    
+        margin-bottom: 25px;
+    }
+
+}

@@ -1,0 +1,819 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    margin: 0;
+    background-color: #2E2E2E;
+
+}
+
+p,
+td,
+button,
+th {
+    font-family: 'Merriweather', sans-serif;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+li {
+    font-family: 'DM Serif Text', sans-serif;
+}
+
+.container {
+    max-width: 1400px;
+    margin: auto;
+}
+
+
+/* Inicio del Header*/
+header {
+    position: fixed;
+    width: 100%;
+    background-color: #2E2E2E;
+    z-index: 1000;
+    border-bottom: 1px solid #F5F1E3;
+    /* Color suave, puedes ajustarlo */
+
+}
+
+header {
+    border-bottom: 1px solid #F5F1E3;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+
+header .container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+}
+
+.nombre-empresa {
+    color: #F5F1E3;
+    font-size: 30px;
+    margin: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 120px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+nav .menu {
+    display: flex;
+    list-style: none;
+}
+
+
+.menu li a {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+
+
+}
+
+.menu-vertical {
+    position: absolute;
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #242323;
+
+}
+
+.menu li:hover>.menu-vertical {
+    /*hijo directo de .menu li, por eso se le aplica dipslay block a la clase */
+    display: block;
+
+}
+
+/*ul:hover .menu-vertical{
+    transform:  translateX(10px); /* moverá el ícono un poco cuando el mouse pase por encima
+
+}*/
+
+/*para que el menu desplegablede acceder que no sobresalga*/
+@media (min-width: 921px) and (max-width:1150px) {
+    .menu-vertical {
+        position: absolute;
+        display: none;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        background-color: #242323;
+
+    }
+
+    ul:hover .menu-vertical {
+        transform: translateX(-10px);
+        /* moverá el ícono un poco para que no salga de la pantalla */
+    }
+}
+
+.menu-vertical li:hover {
+    background-color: #1b1b1b;
+
+}
+
+.menu-vertical li a {
+    display: block;
+    color: #F5F1E3;
+    font-size: 18px;
+    padding: 15px 15px 15px 20px;
+
+}
+
+a {
+    text-decoration: none;
+    color: #F5F1E3;
+    font-size: 20px;
+}
+
+nav a:hover {
+    color: #C9A66B;
+}
+
+
+.icon {
+    width: 14px;
+    /* Puedes ajustar el tamaño según lo que prefieras */
+    height: 14px;
+    /* Ajusta también el salto */
+    transition: transform 0.3s ease;
+    /* Agrega una transición suave al ícono */
+}
+
+.nav-link:hover .icon {
+    transform: rotate(180deg);
+    /* Este efecto moverá el ícono un poco cuando el mouse pase por encima */
+}
+
+.hamburguer {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    top: 30px;
+    /* <-- Ajusta según el alto de tu header */
+    right: 30px;
+    /* <-- La ubica a la derecha */
+    z-index: 1100;
+    /* <-- Asegura que esté encima de otros elementos */
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #F5F1E3;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+
+
+/*Header Responsive*/
+@media (max-width: 920px) {
+    header .container {
+        position: relative;
+        /* Cambia a espacio entre para que el logo y el menú se alineen correctamente */
+        z-index: 10000;
+        justify-content: space-between;
+    }
+
+    nav .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav .nav-link {
+        background-color: #F5F1E3;
+        color: #2E2E2E;
+    }
+
+    nav .menu li {
+        margin: 7px 0;
+    }
+
+    nav .hamburguer {
+        display: flex;
+        /* Muestra el ícono de hamburguesa en pantallas pequeñas */
+    }
+
+    nav .menu.show {
+        display: flex;
+        /* Muestra el menú cuando se activa */
+        background-color: #F5F1E3;
+    }
+
+    .menu li {
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+
+    }
+
+    .menu-vertical {
+        position: static;
+        background-color: #2E2E2E;
+        width: 100%;
+
+    }
+
+    .nombre-empresa {
+        text-align: left;
+
+    }
+
+}
+
+/*header menu responsive*/
+@media (min-width:0px)and (max-width: 619px) {
+    header .container {
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .menu .nav-link {
+        font-size: 15px;
+    }
+
+    .nombre-empresa {
+        font-size: 27px;
+    }
+
+    .menu-vertical li a {
+        font-size: 15px;
+    }
+}
+
+@media (min-width:620px)and (max-width: 920px) {
+    header .container {
+        align-items: center;
+    }
+
+    .menu .nav-link {
+        font-size: 18px;
+    }
+
+    .nombre-empresa {
+        font-size: 27px;
+    }
+
+    .menu-vertical li a {
+
+        font-size: 18px;
+    }
+}
+
+
+/*Inicio de main*/
+
+h1 {
+    font-size: 4em;
+}
+
+h2 {
+    font-size: 2.7em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.25em;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    font-size: 1.25em;
+}
+
+button {
+    font-size: 1.20em;
+    font-weight: bold;
+    padding: 15px 25px;
+    border-radius: 12px;
+    border: 1px solid #6A1B1A;
+    box-shadow: 2px 2px 10px #270202;
+    background-color: #6A1B1A;
+    color: #F5F1E3;
+    cursor: pointer;
+}
+
+button:hover {
+    border: 1px solid #111a24;
+    background-color: #C9A66B;
+    color: #2E2E2E;
+    box-shadow: 2px 2px 10px #C9A66B;
+    transform: scale(1.10);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+
+}
+
+
+main {
+    background-image: linear-gradient(#00000080,
+            #00000080), url("media/FondoInicio/fondoinicio.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    /* Esto hace el efecto "parallax" suave */
+
+
+}
+
+main section {
+    background-color: #00000080;
+}
+
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 110vh;
+    background-image: linear-gradient(#00000080,
+            #00000080), url("media/PaginaInicio/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    overflow: visible;
+
+}
+
+#hero button {
+    font-size: 1.70em;
+
+}
+
+#hero button:hover {
+    background-color: #C9A66B;
+    color: #2E2E2E;
+    box-shadow: 2px 2px 10px #C9A66B;
+    border: none;
+
+}
+
+#hero h1 {
+
+    color: #F5F1E3;
+}
+
+.no-padding {
+    /*se añade con clase en el main.js*/
+    padding-top: 18px;
+    padding-bottom: 18px;
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+
+#somos-academie .container {
+    text-align: center;
+    padding: 200px 12px;
+    color: #F5F1E3;
+
+}
+
+
+
+#nuestros-cursos {
+    background-color: #F5F1E3;
+    color: white;
+    text-align: center;
+
+}
+
+#nuestros-cursos button {
+    border: none;
+}
+
+#nuestros-cursos .container {
+    padding: 100px 0px;
+}
+
+#nuestros-cursos h2 {
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 3em;
+    color: #6A1B1A;
+}
+
+.carta p {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    margin-bottom: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease, margin-bottom 0.3s ease;
+}
+
+.carta p.mostrar {
+    max-height: 300px;
+    opacity: 1;
+    margin-bottom: 30px;
+}
+
+/*.carta p {
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  overflow: hidden;
+}
+
+.carta p.mostrar {
+  transform: scaleY(1);
+  opacity: 1;
+}*/
+
+#nuestros-cursos .carta {
+    background-position: center center;
+    background-size: cover;
+    padding: 50px;
+    margin: 25px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #C9A66B;
+    flex: 1 1 300px;
+}
+
+.carta:first-child {
+    background-image: linear-gradient(#00000080,
+            #00000080), url("media/PaginaInicio/cocinainternacional.jpg");
+
+}
+
+.carta:nth-child(2) {
+    background-image: linear-gradient(#00000080,
+            #00000080), url("media/PaginaInicio/saboresperuano2.jpeg");
+
+
+}
+
+.carta:nth-child(3) {
+    background-image: linear-gradient(#00000080,
+            #00000080), url("media/PaginaInicio/reposteriafrancesa2.jpg");
+}
+
+
+#caracteristicas .container {
+    text-align: center;
+    padding: 200px 12px;
+    color: #F5F1E3;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#caracteristicas li {
+    margin: 15px 0px;
+    font-weight: bold;
+    line-height: 1.4;
+    font-family: 'Merriweather', sans-serif;
+}
+
+#caracteristicas ul {
+    padding: 0;
+    margin: 0;
+    max-width: 500px;
+}
+
+#caracteristicas img {
+    max-height: 500px;
+
+}
+
+@media (max-width: 920px) {
+    #caracteristicas img {
+        display: none;
+    }
+}
+
+#porque-elegir {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 170px 12px;
+    background-color: #6A1B1A;
+    color: #F5F1E3;
+}
+
+#porque-elegir h2 {
+    font-size: 3em;
+    margin: 15px 15px;
+}
+
+#porque-elegir .icon {
+    width: 70px;
+    height: 50px;
+    color: #F5F1E3;
+}
+
+
+#flecha-svg {
+    transition: transform 0.6s ease;
+    cursor: pointer;
+
+}
+
+#flecha-svg.girada {
+    transform: rotate(180deg);
+}
+
+
+#porque-elegir p {
+    font-size: 20px;
+    margin: 15px 15px;
+
+}
+
+#porque-elegir button {
+    background-color: #C9A66B;
+    color: #2E2E2E;
+    padding: 15px 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px #C9A66B;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+#porque-elegir button:hover {
+    background-color: #2E2E2E;
+    box-shadow: 2px 2px 10px #2E2E2E;
+    color: #C9A66B;
+    transform: scale(1.15);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/*para que se ajuste al header fijo*/
+@media (min-width:0px) and (max-width: 619px) {
+    main section {
+        padding: 0px 0px;
+    }
+
+    #hero {
+        padding-top: 220px;
+        height: 140vh;
+    }
+
+    #hero button {
+        font-size: 1.25em;
+
+    }
+
+    #hero h1 {
+        font-size: 3.5em;
+        margin: 10px 10px;
+    }
+
+}
+
+@media (min-width:620px)and (max-width: 920px) {
+    main section {
+        padding: 0px 0px;
+    }
+
+    #hero {
+        padding-top: 85px;
+        height: 140vh;
+    }
+
+    #hero button {
+        font-size: 1.4em;
+
+    }
+
+    #hero h1 {
+        margin: 10px 10px;
+    }
+
+}
+
+/*demas contenido del main*/
+@media (min-width:1020px) {
+    #somos-academie .container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    #somos-academie .texto {
+        width: 50%;
+        padding-left: 60px;
+        text-align: initial;
+        max-width: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #somos-academie .texto h2 {
+        font-size: 4em;
+        margin-bottom: 45px;
+        margin-top: 0px;
+    }
+
+    #somos-academie .texto p {
+        margin: 0px;
+    }
+
+    #somos-academie .vidcontainer iframe {
+        max-width: 100%;
+        margin-top: 30px;
+        border: none;
+        /* opcional: elimina el borde del iframe */
+    }
+
+    #nuestros-cursos .cursos {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    #nuestros-cursos p {
+        margin-bottom: 30px;
+    }
+
+    #nuestros-cursos h3 {
+        margin-top: 0;
+    }
+
+    #nuestros-cursos .carta {
+        padding: 45px;
+        box-shadow: 7px 2px 7px #d3b580;
+    }
+}
+
+/*video quienes-somos*/
+@media (max-width:720px) {
+    #somos-academie .vidcontainer iframe {
+        max-width: 100%;
+        margin-top: 30px;
+        border: none;
+        /* opcional: elimina el borde del iframe */
+
+    }
+}
+#somos-academie .vidcontainer iframe {
+        max-width: 100%;
+        margin-top: 30px;
+        border: none;
+
+/*inicio testimonial*/
+
+.wrapper {
+    width: 100%;
+    margin-top: 50px;
+    padding: 20px 0px;
+    display: none;
+
+}
+
+.slider-testimonial {
+    width: 85%;
+    max-width: 1400px;
+    margin: auto;
+
+}
+
+.testimonial-client img {
+    width: 320px;
+    margin: 0;
+    border-radius: 50%;
+}
+
+#porque-elegir .testimonial-client p {
+    text-align: center;
+    font-family: 'DM Serif Text', sans-serif;
+    font-size: 30px;
+
+}
+
+#porque-elegir .testimonial-text {
+    padding: 10px 150px;
+}
+
+#porque-elegir .testimonial-text p {
+    font-size: 2.7em;
+    font-family: 'Merriweather', sans-serif;
+    font-style: italic;
+}
+
+@media (max-width:920px) {
+    #porque-elegir .testimonial-text p {
+        font-size: 25px;
+    }
+
+    .testimonial-client img {
+        width: 250px;
+    }
+}
+
+
+/*inicio de footer*/
+footer .container {
+    display: flex;
+    height: 100px;
+    background-color: #2E2E2E;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer p {
+    font-size: 20px;
+    color: #F5F1E3;
+    font-weight: bold;
+    margin: 0;
+}
+
+.menufooter {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menufooter li {
+    font-size: 30px;
+    font-weight: bold;
+    color: #F5F1E3;
+}
+
+.menufooter a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.icon-ig,
+.icon-tw,
+.icon-fb {
+    font-size: 30px;
+    color: #F5F1E3;
+    margin: 15px;
+
+}
+
+.icon-ig:hover,
+.icon-tw:hover,
+.icon-fb:hover {
+    color: #C9A66B;
+    cursor: pointer;
+}
+
+
+@media (max-width: 920px) {
+    footer .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+}
+}

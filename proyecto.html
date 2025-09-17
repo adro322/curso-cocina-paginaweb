@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Final</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="js files/sss/sss.css">
+    <script src="js files/sss/sss.js"></script>
+    <script src="js files/menu.js" defer></script>
+    <script src="js files/main.js" defer></script>
+    <script>
+        jQuery(function($) {
+        $('.slider-testimonial').sss({
+            slideShow:true,
+            speed: 4500
+        });});
+    </script>
+
+    
+<body>
+     <header> 
+        <div class="container">
+            <div  class="logo">
+                <a href="inicioProyecto.html"><img href="inicioProyecto.html"src="media/logo.png" alt="logo de la compañia"></a>
+                <br>
+                <h4 class="nombre-empresa">Académie Culinaire <br> de Lima</h4>
+            </div>
+            <nav>
+                <ul class="menu" id="menu">
+                    <li><a href="proyecto.html" class="nav-link">Inicio</a></li>
+                    <li><a href="proyecto.html#somos-academie" class="nav-link">Sobre Nosotros</a></li>
+                    <li><a href="#" class="nav-link">Nuestros Cursos
+                            <svg  width="1em" height="1em" fill="none" viewBox="0 0 24 24" class="icon icon-size-200">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m6 9.5 6 6 6-6" style="vector-effect:non-scaling-stroke"></path>
+                                <path stroke="currentColor" stroke-width="2" d="M12 14.9999v.0001" style="vector-effect:non-scaling-stroke"></path>
+                            </svg>
+                        </a>              
+                        <ul class = "menu-vertical">
+                            <li><a href="proyecto.html#nuestros-cursos">Cursos Insignia</a></li>
+                            <li><a href="cursos.html">Mas Cursos</a></li>
+                        </ul>                 
+                    </li>
+                    <li><a href="proyecto.html#caracteristicas" class="nav-link">Caracteristicas</a> </li>
+                    <li><a href="#" class="nav-link">Acceder
+                            <svg  width="1em" height="1em" fill="none" viewBox="0 0 24  24" class="icon icon-size-200">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m6 9.5 6 6 6-6" style="vector-effect:non-scaling-stroke"></path>
+                                <path stroke="currentColor" stroke-width="2" d="M12 14.9999v.0001" style="vector-effect:non-scaling-stroke"></path>
+                            </svg>
+                        </a>
+                        <ul class = "menu-vertical">
+                            <li><a href="acceder.html">Registrarse</a></li>
+                            <li><a href="acceder.html">Iniciar Sesion</a></li>
+                        </ul>   
+                    </li>
+                </ul>
+                <div class="hamburguer" id="hamburguer">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav> 
+        </div>   
+    </header>
+   
+
+    <main>
+       
+        <section id="hero">
+            
+            <h1>Bienvenido a la Académie <br> Culinaire de Lima</h1>
+            <form action = "cursos.html">
+                <button>Explorar Cursos</button>
+            </form>
+            <audio src="media/Videos - Audios/audiofondo.mp3" controls autoplay loop hidden>
+
+            </audio>
+        </section>
+
+        <section id="somos-academie">
+            <div class="container">
+                <div class="vidcontainer">
+                    <iframe src="https://drive.google.com/file/d/1oiVuZPqG4LkhBr17f9utbFG99iaAptOS/preview" width="640" height="460" allow="autoplay"></iframe>
+                </div>
+                <div class="texto">
+                    <h2>¿Quiénes Somos?</h2>
+                    <p>Somos un espacio donde la pasión por la cocina se transforma en arte, técnica y excelencia. Formamos futuros chefs y amantes de la gastronomía con una propuesta que une lo mejor de la tradición francesa y la riqueza culinaria peruana. Creemos que cada plato es una historia, y aquí te enseñamos a contarla.</p>
+                </div>       
+            </div>
+        </section>
+
+        <section id="nuestros-cursos">
+            <div class="container">
+                <h2>Cursos Insignia</h2>
+                <div class="cursos">
+                    <div class="carta">
+                        <h3>Fundamentos de Alta Cocina Internacional</h3>
+                        <p>Curso enfocado en las técnicas base de la cocina francesa, italiana y mediterránea. Incluye cortes, fondos, salsas madre, emplatado elegante y cocción precisa. Ideal para quienes quieren una formación sólida desde cero.
+                        </p><br>
+                        <button onclick="mostrarInformacion(this,'curso1.html')">Saber mas</button> 
+                    </div>
+                    <div class="carta">
+                        <h3>Sabores del Perú: Cocina Tradicional con Técnica Moderna</h3>
+                        <p>Revaloriza la gastronomía peruana aplicando técnicas de alta cocina. Aprende a preparar platos como ají de gallina, lomo saltado o causa limeña con montajes de restaurante gourmet.</p> <br>
+                        <button onclick="mostrarInformacion(this,'curso2.html')">Saber mas</button> 
+                    </div>
+                    <div class="carta">
+                        <h3>Arte de la Repostería Francesa</h3>
+                        <p>Desde macarons hasta éclairs y tartas, este curso guía paso a paso en el mundo de la pastelería francesa. Enfocado en la precisión, estética y sabor, perfecto para amantes del detalle.</p><br>
+                        <button onclick="mostrarInformacion(this,'curso3.html')">Saber mas</button> 
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="caracteristicas">
+            <div class="container">
+                <ul>
+                    <li>✅ 100% Presencial <br>Aprende en aulas equipadas con cocinas profesionales. </li> <br>
+                    <li>👨‍🍳 Clases con Chefs Expertos <br>Docentes con experiencia nacional e internacional. </li> <br>
+                    <li>📜 Certificación al Finalizar <br>Diploma reconocido por la academia. </li><br>
+                    <li>🍴 Prácticas Guiadas <br>Más del 70% del curso es práctico. </li> <br>
+                    <li>📆 Duración Flexible <br>Cursos desde 4 hasta 15 semanas. </li>
+                </ul>
+                <img src="media/quienessomos.jpg" alt="foto caracteristicas">
+            </div>
+        </section>
+        
+        <section id="porque-elegir">
+            <h2>¿Por qué elegir Académie Culinaire?</h2>
+            <p>Nuestra pasión por la cocina se refleja en cada clase, cada receta y cada experiencia. Aprende de chefs profesionales en un ambiente cálido y de alto nivel. <br>¡Hecha un vistazo a testimonios de nuestros alumnos!</p>
+            <svg  onclick="mostrarReseñas()" id="flecha-svg" width="15em" height="15em" fill="none" viewBox="0 0 24 24" class="icon icon-size-600">
+                <path id="flechita"  stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m6 9.5 6 6 6-6" style="vector-effect:non-scaling-stroke"></path>
+            </svg>
+            <div class="wrapper">
+                <div class="slider-testimonial">
+                    <div class="testimonial-item">
+                        <div class="testimonial-client">
+                            <img src="media/PaginaInicio/alumno1.jpg" alt="imagen del cliente">
+                            <p class="client-name">Roberto del Campo</p>
+                        </div>
+                        <div class="testimonial-text">
+                            <p>"La Académie Culinaire de Lima transformó mi pasión por la cocina en una carrera. Los cursos son completos y los chefs son increíbles. ¡Recomiendo 100%!"</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-client">
+                            <img src="media/PaginaInicio/alumno2.jpg" alt="imagen del cliente">
+                            <p class="client-name">Maria Arevano</p>
+                        </div>
+                        <div class="testimonial-text">
+                            <p>"Nunca pensé que aprender a cocinar podría ser tan divertido y enriquecedor. Los cursos son prácticos y te preparan para el mundo real de la gastronomía."</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-client">
+                            <img src="media/PaginaInicio/alumno3.jpg" alt="imagen del cliente">
+                            <p class="client-name">Matias Castillo</p>
+                        </div>
+                        <div class="testimonial-text">
+                            <p>"La mejor decisión que he tomado. Los cursos son intensivos pero muy gratificantes. Aprendí técnicas que nunca imaginé y ahora trabajo en un restaurante de renombre."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+           
+    </main>
+    <footer>
+       
+        <div class="container">
+            <p> &copy; 2025 Académie Culinaire de Lima. Todos los derechos reservados.</p>
+            <ul class="menufooter">
+                <li><a href="https://www.instagram.com" target="_blank">
+                    <i class="fa-brands fa-instagram  icon-ig"></i>
+                </a></li>
+                <li><a href="https://www.twitter.com" target="_blank">
+                    <i class="fa-brands fa-twitter  icon-tw "></i>
+                </a></li>
+                <li><a href="https://www.facebook.com" target="_blank">
+                    <i class="fa-brands fa-facebook  icon-ig"></i>
+                </a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>

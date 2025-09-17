@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Cursos</title>
+    <link rel="stylesheet" href="stylecursos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script src="js files/cursos.js" defer></script>
+    <script src="js files/menu.js" defer></script> 
+    
+</head>
+<body>
+     <header> 
+        <div class="container">
+            <div  class="logo">
+                <a href="inicioProyecto.html"><img href="inicioProyecto.html"src="media/logo.png" alt="logo de la compañia"></a>
+                <br>
+                <h4 class="nombre-empresa">Académie Culinaire <br> de Lima</h4>
+            </div>
+            <nav>
+                <ul class="menu" id="menu">
+                    <li><a href="proyecto.html" class="nav-link">Inicio</a></li>
+                    <li><a href="proyecto.html#somos-academie" class="nav-link">Sobre Nosotros</a></li>
+                    <li><a href="#" class="nav-link">Nuestros Cursos
+                            <svg  width="1em" height="1em" fill="none" viewBox="0 0 24 24" class="icon icon-size-200">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m6 9.5 6 6 6-6" style="vector-effect:non-scaling-stroke"></path>
+                                <path stroke="currentColor" stroke-width="2" d="M12 14.9999v.0001" style="vector-effect:non-scaling-stroke"></path>
+                            </svg>
+                        </a>              
+                        <ul class = "menu-vertical">
+                            <li><a href="proyecto.html#nuestros-cursos">Cursos Insignia</a></li>
+                            <li><a href="cursos.html">Mas Cursos</a></li>
+                        </ul>                 
+                    </li>
+                    <li><a href="proyecto.html#caracteristicas" class="nav-link">Caracteristicas</a> </li>
+                    <li><a href="#" class="nav-link">Acceder
+                            <svg  width="1em" height="1em" fill="none" viewBox="0 0 24  24" class="icon icon-size-200">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m6 9.5 6 6 6-6" style="vector-effect:non-scaling-stroke"></path>
+                                <path stroke="currentColor" stroke-width="2" d="M12 14.9999v.0001" style="vector-effect:non-scaling-stroke"></path>
+                            </svg>
+                        </a>
+                        <ul class = "menu-vertical">
+                            <li><a href="acceder.html">Registrarse</a></li>
+                            <li><a href="acceder.html">Iniciar Sesion</a></li>
+                        </ul>   
+                    </li>
+                </ul>
+                <div class="hamburguer" id="hamburguer">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav> 
+        </div>   
+    </header>
+
+    <main>
+        <section id="intro-cursos">
+            <div class="container">
+                <h1>Cursos adicionales</h1>
+            </div>
+        </section>
+
+        <!-- CARRUSEL EN GRID -->
+        <section id="grid-cursos">
+            <div class="carousel-controls">
+                <button class="btn-prev"><i class="fa-solid fa-circle-chevron-left icon-left"></i></button>
+                <div class="grid-wrapper">
+                    <div class="grid-container">
+                        <div class="curso-card">
+                            <img src="media/PaginaMasCursos/barman.jpg" alt="Imagen del curso de coctelería" />
+                            <div class="fecha">
+                                <span class="dia">26</span>
+                                <span class="mes">MAY</span>
+                                <span class="anio">2025</span>
+                            </div>
+                            <span class="categoria">Presencial</span>
+                            <p class="titulo">Dirección de Bares y Coctelería Moderna</p>
+                            <p class="descuento">10% dscto.</p>
+                            <div class="btn">
+                                <form action="cursoAdicional1.html">
+                                    <button>Ir al Curso</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="curso-card">
+                            <img src="media/PaginaMasCursos/pez2.jpg" alt="Imagen del curso de tradiciones" />
+                            <div class="fecha">
+                                <span class="dia">10</span>
+                                <span class="mes">MAY</span>
+                                <span class="anio">2025</span>
+                            </div>
+                            <span class="categoria">Presencial</span>
+                            <p class="titulo">Tradiciones Marinas: Técnicas y Recetas del Mar</p>
+                            <p class="descuento">50% dscto.</p>
+                            <div class="btn">
+                                <form action="cursoAdicional2.html">
+                                    <button>Ir al Curso</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="curso-card">
+                            <img src="media/PaginaMasCursos/pasta.jpg" alt="Imagen del curso de pasta" />
+                            <div class="fecha">
+                                <span class="dia">13</span>
+                                <span class="mes">MAY</span>
+                                <span class="anio">2025</span>
+                            </div>
+                            <span class="categoria">Presencial</span>
+                            <p class="titulo">Maestría en Pastas: Elaboración y Secretos de la Cocina Italiana</p>
+                            <p class="descuento">50% dscto.</p>
+                            <div class="btn">
+                                <form action="cursoAdicional3.html">
+                                    <button>Ir al Curso</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="curso-card">
+                            <img src="media/PaginaMasCursos/postre1.jpg" alt="Imagen del curso de postres" />
+                            <div class="fecha">
+                                <span class="dia">22</span>
+                                <span class="mes">MAY</span>
+                                <span class="anio">2025</span>
+                            </div>
+                            <span class="categoria">Presencial</span>
+                            <p class="titulo">Diseño y Creatividad de Postres</p>
+                            <p class="descuento">50% dscto.</p>
+                            <div class="btn">
+                                <form action="cursoAdicional4.html">
+                                    <button>Ir al Curso</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="curso-card">
+                            <img src="media/PaginaMasCursos/admincocina.jpg" alt="Imagen del curso de admin" />
+                            <div class="fecha">
+                                <span class="dia">05</span>
+                                <span class="mes">MAY</span>
+                                <span class="anio">2025</span>
+                            </div>
+                            <span class="categoria">Online</span>
+                            <p class="titulo">Administración Estratégica y Marketing Digital para Restaurantes</p>
+                            <p class="descuento">50% dscto.</p>
+                            <div class="btn">
+                                <form action="cursoAdicional5.html">
+                                    <button>Ir al Curso</button>
+                                </form>
+                            </div>
+                        </div>
+                        
+
+                    </div>
+                </div>
+                <button class="btn-next"><i class="fa-solid fa-circle-chevron-right icon-right"></i></button>
+            </div>
+        </section>
+
+        
+        <section id="tablascursos">
+            <div class="container">
+                <h2>Detalles de los Cursos</h2>
+                <p>Revisa los aspectos más importantes antes de inscribirte.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cursos</th>
+                            <th>Modalidad</th>
+                            <th>Duración</th>
+                            <th>Precio (*)</th>
+                            <th>Inicio</th>
+                            <th>Nivel</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="fila-modal" data-modal="modal1">
+                            <td>Direccion de Bares y Cocteleria Moderna 🍸</td>
+                            <td>Presencial</td>
+                            <td>2 meses</td>
+                            <td>S/. 5,000</td>
+                            <td>26 de mayo</td>
+                            <td>Intermedio</td>
+                        </tr>
+                        <tr class="fila-modal" data-modal="modal2">
+                            <td>Tradiciones Marinas: Técnicas y Recetas del Mar 🐟</td>
+                            <td>Presencial</td>
+                            <td>5 meses</td>
+                            <td>S/. 4,500</td>
+                            <td>10 de mayo</td>
+                            <td>Basico</td>
+                        </tr>
+                        <tr class="fila-modal" data-modal="modal3">
+                            <td>Maestria en Pasta: Elaboración y Secretos de la Cocina Italiana 🍝</td>
+                            <td>Presencial</td>
+                            <td>4 meses</td>
+                            <td>S/. 7,500</td>
+                            <td>13 de mayo</td>
+                            <td>Avanzado</td>
+                        </tr>
+                        <tr class="fila-modal" data-modal="modal4">
+                            <td>Diseño y Creativad de Postres 🥐</td>
+                            <td>Presencial</td>
+                            <td>4 meses</td>
+                            <td>S/. 8,500</td>
+                            <td>22 de mayo</td>
+                            <td>Intermedio</td>
+                        </tr>
+                        <tr class="fila-modal" data-modal="modal5">
+                            <td>Administración Estratégica y Marketing Digital para Restaurantes 🏢</td>
+                            <td>Online</td>
+                            <td>3 meses</td>
+                            <td>S/. 3,500</td>
+                            <td>5 de mayo</td>
+                            <td>Basico - Intermedio</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+            <small class="terminos">(*) Precios sin descuento aplicado</small>
+
+            <dialog id="modal1" class="modal">
+                <div class="header"></div>
+                <div class="modal-content">
+                    <h2>Direccion de Bares y Cocteleria Moderna</h2>
+                    <div class="info">
+                        <p>Curso intensivo de dirección de bares y coctelería moderna. Aprende a crear experiencias únicas.</p>
+                        <p><strong>Horario:</strong> Lunes y Miércoles, 6:00 p. m. - 9:00 p. m. <br> Sábados intensivos, 10:00 a. m. – 2:00 p. m.</p>
+                        <p><strong>Modalidad:</strong> Presencial - Campus Miraflores, Aula C204</p>
+                        <p><strong>Bartender:</strong> Laura Alvarez, especializada en cocteleria moderna</p>
+                    </div>
+                        <br> ------------------------------------------------------------------------------------------------------------------- </br>
+                    <div class="descripcion">
+                        <p><strong>Certificación:</strong> Certificado oficial de la Académie Culinaire</p>
+                        <p><strong>Objetivo:</strong> Domina la barra como un profesional y crea experiencias inolvidables.</p>
+                    </div>
+                </div>
+                <button id="btn-cerrar-modal">salir</button>
+            </dialog>
+
+            <dialog id="modal2"class="modal">
+                <div class="header"></div>
+                <div class="modal-content">
+                    <h2>Tradiciones Marinas</h2>
+                    <div class="info">
+                        <p>Aprende recetas de mariscos y técnicas de cocina marina tradicional peruana.</p>
+                        <p><strong>Horario:</strong> Martes y Jueves, 6:30 p. m. - 9:30 p. m.</p>
+                        <p><strong>Modalidad:</strong> Presencial - Campus San Borja, Aula B103</p>
+                        <p><strong>Chef:</strong> Luis Delgado, especialista en cocina marina del norte del Perú</p>
+                    </div>
+                        <br> ------------------------------------------------------------------------------------------------------------------- </br>
+                    <div class="descripcion">
+                        <p><strong>Certificación:</strong> Diploma avalado por el Instituto Gastronómico Peruano</p>
+                        <p><strong>Objetivo:</strong> Descubre los secretos del mar y domina las recetas más representativas de nuestra costa.</p>
+                    </div>
+                </div>
+                <button id="btn-cerrar-modal">salir</button>
+            </dialog>
+
+            <dialog id="modal3"class="modal">
+                <div class="header"></div>
+                <div class="modal-content">
+                    <h2>Maestría en Pasta</h2>
+                    <div class="info">
+                        <p>Domina el arte de la pasta fresca y las técnicas italianas más auténticas.</p>
+                        <p><strong>Horario:</strong> Lunes a Viernes, 10:00 a. m. - 1:00 p. m.</p>
+                        <p><strong>Modalidad:</strong> Presencial - Campus Surco, Aula P201</p>
+                        <p><strong>Chef:</strong> Andrea Rossi, chef italiana con 20 años de experiencia</p>
+                    </div>
+                        <br> ------------------------------------------------------------------------------------------------------------------- </br>
+                    <div class="descripcion">
+                        <p><strong>Certificación:</strong> Certificado internacional de cocina italiana</p>
+                        <p><strong>Objetivo:</strong> Lleva tus habilidades culinarias al siguiente nivel dominando la cocina italiana artesanal.</p>
+                    </div>
+                </div>
+                <button id="btn-cerrar-modal">salir</button>
+            </dialog>
+
+            <dialog id="modal4"class="modal">
+                <div class="header"></div>
+                <div class="modal-content">
+                    <h2>Diseño y Creatividad de Postres</h2>
+                    <div class="info">
+                        <p>Aprende a diseñar postres con estética, sabor y presentación profesional.</p>
+                        <p><strong>Horario:</strong> Martes y Viernes, 3:00 p. m. - 6:00 p. m.</p>
+                        <p><strong>Modalidad:</strong> Presencial - Campus La Molina, Aula D102</p>
+                        <p><strong>Chef:</strong> Karla Meneses, pastelera finalista en Bake Off Paris</p>
+                    </div>
+                        <br> ------------------------------------------------------------------------------------------------------------------- </br>
+                    <div class="descripcion">
+                        <p><strong>Certificación:</strong> Diploma en repostería creativa</p>
+                        <p><strong>Objetivo:</strong> Desarrolla postres innovadores que conquisten por la vista y el sabor.</p>
+                    </div>
+                </div>
+                <button id="btn-cerrar-modal">salir</button>
+            </dialog>
+
+            <dialog id="modal5"class="modal">
+                <div class="header"></div>
+                <div class="modal-content">
+                    <h2>Administración Estratégica y Marketing Digital para Restaurantes</h2>
+                    <div class="info">
+                        <p>Gestiona tu restaurante con visión estratégica y domina las herramientas digitales modernas.</p>
+                        <p><strong>Horario:</strong> Sábados, 9:00 a. m. - 1:00 p. m.</p>
+                        <p><strong>Modalidad:</strong> Online en vivo - Plataforma Teams (con grabaciones)</p>
+                        <p><strong>Instructor:</strong> Renzo Paredes, consultor en marketing gastronómico</p>
+                    </div>
+                        <br> ------------------------------------------------------------------------------------------------------------------- </br>
+                    <div class="descripcion">
+                        <p><strong>Certificación:</strong> Certificado de gestión y marketing emitido por la institución</p>
+                        <p><strong>Objetivo:</strong> Aprende a posicionar y hacer crecer tu marca gastronómica en el entorno digital.</p>
+                    </div>
+                </div>
+                <button id="btn-cerrar-modal">salir</button>
+            </dialog>
+
+        </section>
+        <section id="calendario">
+            <h2>¡Calendario Academie Culinaire de Lima!</h2>
+                <p>Hecha un vistaso a nuestro calendario y estante al tanto del inicio de nuestras clases</p> <br>
+                <form action="calendario.html">
+                    <button>Calendario</button> 
+                </form>
+        </section>
+        
+
+        
+    </main>
+
+
+   <footer>
+       
+        <div class="container">
+            <p> &copy; 2025 Académie Culinaire de Lima. Todos los derechos reservados.</p>
+            <ul class="menufooter">
+                <li><a href="https://www.instagram.com" target="_blank">
+                    <i class="fa-brands fa-instagram  icon-ig"></i>
+                </a></li>
+                <li><a href="https://www.twitter.com" target="_blank">
+                    <i class="fa-brands fa-twitter  icon-tw "></i>
+                </a></li>
+                <li><a href="https://www.facebook.com" target="_blank">
+                    <i class="fa-brands fa-facebook  icon-ig"></i>
+                </a></li>
+            </ul>
+        </div>
+    </footer>
+
+
+
+
+</body>
+</html>

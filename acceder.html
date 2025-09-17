@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Final</title>
+    <link rel="stylesheet" href="styleacceder.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link  rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+    <script src="js files/acceder.js" defer></script> 
+    <script src="js files/menu.js" defer></script> 
+
+
+</head>
+<body>
+     <header> 
+        <div class="container">
+            <div  class="logo">
+                <a href="inicioProyecto.html"><img href="inicioProyecto.html"src="media/logo.png" alt="logo de la compañia"></a>
+                <br>
+                <h4 class="nombre-empresa">Académie Culinaire <br> de Lima</h4>
+            </div>
+            <nav>
+                <ul class="menu" id="menu">
+                    <li><a href="proyecto.html" class="nav-link">Inicio</a></li>
+                    <li><a href="proyecto.html#somos-academie" class="nav-link">Sobre Nosotros</a></li>
+                    <li><a href="#" class="nav-link">Nuestros Cursos
+                            <svg  width="1em" height="1em" fill="none" viewBox="0 0 24 24" class="icon icon-size-200">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m6 9.5 6 6 6-6" style="vector-effect:non-scaling-stroke"></path>
+                                <path stroke="currentColor" stroke-width="2" d="M12 14.9999v.0001" style="vector-effect:non-scaling-stroke"></path>
+                            </svg>
+                        </a>              
+                        <ul class = "menu-vertical">
+                            <li><a href="proyecto.html#nuestros-cursos">Cursos Insignia</a></li>
+                            <li><a href="cursos.html">Mas Cursos</a></li>
+                        </ul>                 
+                    </li>
+                    <li><a href="proyecto.html#caracteristicas" class="nav-link">Caracteristicas</a> </li>
+                    <li><a href="#" class="nav-link">Acceder
+                            <svg  width="1em" height="1em" fill="none" viewBox="0 0 24  24" class="icon icon-size-200">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m6 9.5 6 6 6-6" style="vector-effect:non-scaling-stroke"></path>
+                                <path stroke="currentColor" stroke-width="2" d="M12 14.9999v.0001" style="vector-effect:non-scaling-stroke"></path>
+                            </svg>
+                        </a>
+                        <ul class = "menu-vertical">
+                            <li><a href="acceder.html">Registrarse</a></li>
+                            <li><a href="acceder.html">Iniciar Sesion</a></li>
+                        </ul>   
+                    </li>
+                </ul>
+                <div class="hamburguer" id="hamburguer">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                
+            </nav> 
+        </div>   
+    </header>
+
+    <main>
+
+    <section id="hero">
+        <div class="container" id="container">
+            <div class="form-container sign-up">
+                <form>
+                    <h1>Crear Cuenta</h1>
+                    <div class="social-icons">
+                        <a href="#" class="icons"><i class='bx bxl-google'></i></a>
+                        <a href="#" class="icons"><i class='bx bxl-facebook'></i></a>
+                        <a href="#" class="icons"><i class='bx bxl-github'></i></a>
+                        <a href="#" class="icons"><i class='bx bxl-linkedin'></i></a>
+                    </div>
+                    <span>Registrate con tu Correo</span>
+                    <input type="text" placeholder="Nombre">
+                    <input type="email" placeholder="Ingresa tu Correo">
+                    <input type="password" placeholder="Ingresa tu Contraseña">
+                    <button>Registrarme</button>
+                </form>
+            </div>
+
+
+            <div class="form-container sign-in">
+                <form>
+                    <h1>Iniciar Sesion</h1>
+                    <div class="social-icons">
+                        <a href="#" class="icons"><i class='bx bxl-google'></i></a>
+                        <a href="#" class="icons"><i class='bx bxl-facebook'></i></a>
+                        <a href="#" class="icons"><i class='bx bxl-github'></i></a>
+                        <a href="#" class="icons"><i class='bx bxl-linkedin'></i></a>
+                    </div>
+                    <span>Accede con tu Correo y Contraseña</span>
+                    <input type="email" placeholder="Ingresa tu Correo">
+                    <input type="password" placeholder="Ingresa tu Contraseña">
+                    <a href="#">¿Olvidaste tu Contraseña?</a>
+                    <button>Iniciar Sesion</button>
+                </form>
+            </div>
+
+
+            <div class="toggle-container">
+                <div class="toggle">
+                    <div class="toggle-panel toggle-left">
+                        <h1>Bienvenido a <br>Academie Culinaire de Lima</h1>
+                        <p>Inicia Sesion con tu Correo y Contraseña</p>
+                        <button class="hidden" id="login">Inicia Sesion</button>
+                    </div>
+                    <div class="toggle-panel toggle-right">
+                        <h1>Hola Cocineros!</h1>
+                        <p>Unete a la Academie para mejorar tus habilidades culinarias</p>
+                        <button class="hidden" id="register">Registrate</button>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    
+</section>
+
+
+    </main>
+
+    <footer>
+       
+        <div class="container">
+            <p> &copy; 2025 Académie Culinaire de Lima. Todos los derechos reservados.</p>
+            <ul class="menufooter">
+                <li><a href="https://www.instagram.com" target="_blank">
+                    <i class="fa-brands fa-instagram  icon-ig"></i>
+                </a></li>
+                <li><a href="https://www.twitter.com" target="_blank">
+                    <i class="fa-brands fa-twitter  icon-tw "></i>
+                </a></li>
+                <li><a href="https://www.facebook.com" target="_blank">
+                    <i class="fa-brands fa-facebook  icon-ig"></i>
+                </a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

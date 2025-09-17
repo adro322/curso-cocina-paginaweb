@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calendario</title>
+    <link rel="stylesheet" href="stylecalendario.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="js files/menu.js" defer></script> 
+
+</head>
+<body>
+    <header>
+     <div class="container">
+            <div  class="logo">
+                <a href="inicioProyecto.html"><img href="inicioProyecto.html"src="media/logo.png" alt="logo de la compañia"></a>
+                <br>
+                <h4 class="nombre-empresa">Académie Culinaire <br> de Lima</h4>
+            </div>
+            <nav>
+                <ul class="menu" id="menu">
+                    <li><a href="proyecto.html" class="nav-link">Inicio</a></li>
+                    <li><a href="proyecto.html#somos-academie" class="nav-link">Sobre Nosotros</a></li>
+                    <li><a href="#" class="nav-link">Nuestros Cursos
+                            <svg  width="1em" height="1em" fill="none" viewBox="0 0 24 24" class="icon icon-size-200">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m6 9.5 6 6 6-6" style="vector-effect:non-scaling-stroke"></path>
+                                <path stroke="currentColor" stroke-width="2" d="M12 14.9999v.0001" style="vector-effect:non-scaling-stroke"></path>
+                            </svg>
+                        </a>              
+                        <ul class = "menu-vertical">
+                            <li><a href="proyecto.html#nuestros-cursos">Cursos Insignia</a></li>
+                            <li><a href="cursos.html">Mas Cursos</a></li>
+                        </ul>                 
+                    </li>
+                    <li><a href="proyecto.html#caracteristicas" class="nav-link">Caracteristicas</a> </li>
+                    <li><a href="#" class="nav-link">Acceder
+                            <svg  width="1em" height="1em" fill="none" viewBox="0 0 24  24" class="icon icon-size-200">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m6 9.5 6 6 6-6" style="vector-effect:non-scaling-stroke"></path>
+                                <path stroke="currentColor" stroke-width="2" d="M12 14.9999v.0001" style="vector-effect:non-scaling-stroke"></path>
+                            </svg>
+                        </a>
+                        <ul class = "menu-vertical">
+                            <li><a href="acceder.html">Registrarse</a></li>
+                            <li><a href="acceder.html">Iniciar Sesion</a></li>
+                        </ul>   
+                    </li>
+                </ul>
+                <div class="hamburguer" id="hamburguer">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav> 
+        </div>   
+    </header>
+    
+    <main>
+        <!-- Calendario Mayo 2025  -->
+        <div id="calendario" class="container">
+            <section class="calendario">
+                <h2>📅 Mayo 2025</h2>
+            
+                <div class="calendario-grid">
+
+                    <div class="cabecera">Dom</div>
+                    <div class="cabecera">Lun</div>
+                    <div class="cabecera">Mar</div>
+                    <div class="cabecera">Mié</div>
+                    <div class="cabecera">Jue</div>
+                    <div class="cabecera">Vie</div>
+                    <div class="cabecera">Sáb</div>
+                    
+                    <!-- Días vacíos antes del 1 de mayo -->
+                    <div class="dia vacio"></div>
+                    <div class="dia vacio"></div>
+                    <div class="dia vacio"></div>
+                    <div class="dia vacio"></div>
+
+                    <!-- Días del mes -->
+                    <div class="dia">1</div>
+                    <div class="dia">2</div>
+                    <div class="dia">3</div>
+                    <div class="dia">4</div>
+                    <div class="dia curso">
+                            <div class="fecha">5 </div>
+                            <div class="detalle">Administracion Estrategica y Marketing Digital para Restaurantes</div>
+                    </div> 
+                    <div class="dia">6</div>
+                    <div class="dia cursoI">
+                        <div class="fecha">7 </div>
+                        <div class="detalle">Sabores del Perú: Cocina Tradicional con Técnica Moderna</div>
+                    </div>
+                    <div class="dia">8</div>
+                    <div class="dia">9</div>
+                    <div class="dia curso">
+                        <div class="fecha">10 </div>
+                        <div class="detalle">Tradiciones Marinas: Tecnicas y Recetas del Mar</div>
+                    </div>
+                    <div class="dia">11</div>
+                    <div class="dia">12</div>
+                    <div class="dia curso">
+                        <div class="fecha">13 </div>
+                        <div class="detalle">Maestria en Pasta: Elaboracion y Secretos de la Cocina Italiana</div>
+                    </div>
+                    <div class="dia">14</div>
+                    <div class="dia">15</div>
+                    <div class="dia">16</div>
+                    <div class="dia">17</div>
+                    <div class="dia cursoI">
+                        <div class="fecha">18 </div>
+                        <div class="detalle">Arte de la Repostería Francesa</div>
+                    </div>
+                    <div class="dia">19</div>
+                    <div class="dia">20</div>
+                    <div class="dia">21</div>
+                    <div class="dia curso">
+                        <div class="fecha">22 </div>
+                        <div class="detalle">Diseño y Creatividad de Postres</div>
+                    </div>
+                    <div class="dia">23</div>
+                    <div class="dia">24</div>
+                    <div class="dia">25</div>
+                    <div class="dia curso">
+                        <div class="fecha">26 </div>
+                        <div class="detalle">Direccion de Bares y Cocteleria Moderna</div>
+                    </div>
+                    <div class="dia">27</div>
+                    <div class="dia">28</div>
+                    <div class="dia cursoI">
+                        <div class="fecha">29 </div>
+                        <div class="detalle">Fundamentos de Alta Cocina Internacional</div>
+                    </div>
+                    <div class="dia">30</div>
+                    <div class="dia">31</div>
+                </div>
+            </section>
+         </div>
+            
+    </main>
+
+     <footer>
+        <div class="container">
+            <p> &copy; 2025 Académie Culinaire de Lima. Todos los derechos reservados.</p>
+            <ul class="menufooter">
+                <li><a href="https://www.instagram.com" target="_blank">
+                    <i class="fa-brands fa-instagram  icon-ig"></i>
+                </a></li>
+                <li><a href="https://www.twitter.com" target="_blank">
+                    <i class="fa-brands fa-twitter  icon-tw "></i>
+                </a></li>
+                <li><a href="https://www.facebook.com" target="_blank">
+                    <i class="fa-brands fa-facebook  icon-ig"></i>
+                </a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
