@@ -1,0 +1,1 @@
+Este proyecto consiste en el desarrollo de una página web ficticia para la “Académie Culinaire de Lima”, creada como parte del curso de Programación Web. El sitio incluye secciones como inicio, sobre nosotros, cursos y registro de alumnos, con un diseño responsivo desarrollado en HTML, CSS y JavaScript.
